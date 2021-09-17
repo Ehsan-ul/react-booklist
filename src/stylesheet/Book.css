@@ -1,0 +1,15 @@
+.Book {
+  margin: 20px auto;
+  padding: 20px;
+  width: 500px;
+  border: none;
+  border-radius: 5px;
+  background-color: #535777;
+  color: #fff;
+  box-shadow: 1px 1px 5px #1eaedb;
+}
+
+.button,
+button {
+  margin-bottom: 0;
+}
