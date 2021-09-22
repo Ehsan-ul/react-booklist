@@ -2,6 +2,8 @@ import React from 'react';
 import '../../stylesheet/Book.css';
 
 const Book = (props) => {
+  console.log('This is Book Component!');
+
   let { name, author } = props;
   return (
     <div className='Book'>

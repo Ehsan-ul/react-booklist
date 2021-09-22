@@ -3,10 +3,15 @@ import BookItem from '../assets/BookItem';
 import BookList from './lists/BookList';
 
 class MainComponent extends Component {
-  state = {
-    bookDetails: BookItem,
-    toggoleBooks: true,
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      bookDetails: BookItem,
+      toggoleBooks: true,
+    };
+    console.log('Constructor from MainComponent!');
+  }
 
   changeBookName = (event, index) => {
     const newBookDetails = [...this.state.bookDetails];
@@ -42,8 +47,20 @@ class MainComponent extends Component {
   };
 
   // ------------------------------------------------
+  UNSAFE_componentWillMount() {
+    console.log('componentWillMount from MainComponent!');
+  }
 
+  // ------------------------------------------------
+  // componentDidMount function sobar ses e call hoy
+  componentDidMount() {
+    console.log('componentDidMount from MainComponent!');
+  }
+
+  // -------------------------------------------------
   render() {
+    console.log('render from MainComponent!');
+
     const style = {
       marginTop: '5px',
       backgroundColor: 'black',
