@@ -57,7 +57,25 @@ class MainComponent extends Component {
     console.log('componentDidMount from MainComponent!');
   }
 
-  // -------------------------------------------------
+  // ====== Component update LifeCycle- by state
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log(
+      'shouldComponentUpdate from MainComponent',
+      nextProps,
+      nextState
+    );
+    return true;
+  }
+
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
+    console.log('componentWillUpdate from MainComponent');
+  }
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate form MainComponent');
+  }
+
+  // -----------------------------------------------
   render() {
     console.log('render from MainComponent!');
 

@@ -18,7 +18,7 @@ class BookList extends Component {
     console.log('componentDidMount from Booklist!');
   }
 
-  // ======= Component Update Life Cycle ========
+  // ======= Component Update Life Cycle- by props ========
   UNSAFE_componentWillReceiveProps(nextProps) {
     console.log('componentWillReceiveProps from Booklist', nextProps);
   }
