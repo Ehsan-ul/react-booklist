@@ -2,7 +2,7 @@ import React from 'react';
 import '../../stylesheet/Book.css';
 
 const Book = (props) => {
-  console.log('This is Book Component!');
+  // console.log('This is Book Component!');
 
   let { name, author } = props;
   return (

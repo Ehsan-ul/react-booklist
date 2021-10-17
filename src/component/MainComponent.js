@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import BookItem from '../assets/BookItem';
 import BookList from './lists/BookList';
+import NewBook from './representational/NewBook';
 
 class MainComponent extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class MainComponent extends Component {
       bookDetails: BookItem,
       toggoleBooks: true,
     };
-    console.log('Constructor from MainComponent!');
+    // console.log('Constructor from MainComponent!');
   }
 
   changeBookName = (event, index) => {
@@ -47,37 +48,37 @@ class MainComponent extends Component {
   };
 
   // ------------------------------------------------
-  UNSAFE_componentWillMount() {
-    console.log('componentWillMount from MainComponent!');
-  }
+  // UNSAFE_componentWillMount() {
+  //   console.log('componentWillMount from MainComponent!');
+  // }
 
   // ------------------------------------------------
-  // componentDidMount function sobar ses e call hoy
-  componentDidMount() {
-    console.log('componentDidMount from MainComponent!');
-  }
+  // // componentDidMount function sobar ses e call hoy
+  // componentDidMount() {
+  //   console.log('componentDidMount from MainComponent!');
+  // }
 
-  // ====== Component update LifeCycle- by state
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log(
-      'shouldComponentUpdate from MainComponent',
-      nextProps,
-      nextState
-    );
-    return true;
-  }
+  // // ====== Component update LifeCycle- by state
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log(
+  //     'shouldComponentUpdate from MainComponent',
+  //     nextProps,
+  //     nextState
+  //   );
+  //   return true;
+  // }
 
-  UNSAFE_componentWillUpdate(nextProps, nextState) {
-    console.log('componentWillUpdate from MainComponent');
-  }
+  // UNSAFE_componentWillUpdate(nextProps, nextState) {
+  //   console.log('componentWillUpdate from MainComponent');
+  // }
 
-  componentDidUpdate() {
-    console.log('componentDidUpdate form MainComponent');
-  }
+  // componentDidUpdate() {
+  //   console.log('componentDidUpdate form MainComponent');
+  // }
 
   // -----------------------------------------------
   render() {
-    console.log('render from MainComponent!');
+    // console.log('render from MainComponent!');
 
     const style = {
       marginTop: '5px',
@@ -99,12 +100,23 @@ class MainComponent extends Component {
 
     return (
       <div className='App'>
+       <div className="nav-bar">
+         <ul>
+           <li><a href="/">Home</a></li>
+           <li><a href="/new">New Book</a></li>
+         </ul>
+       </div>
+
+
+
         <h2 style={style}>Book List</h2>
         <button onClick={this.toggoleBooks} className='button-primary'>
           Toggole Books
         </button>
 
         {newBookDetails}
+
+        <NewBook />
       </div>
     );
   }

@@ -5,41 +5,41 @@ import Book from '../representational/Book';
 class BookList extends Component {
   constructor(props) {
     super(props);
-    console.log('constructor from Booklist');
+    // console.log('constructor from Booklist');
   }
 
   // ------------------------------------------------
-  UNSAFE_componentWillMount() {
-    console.log('componentWillMount from Booklist!');
-  }
+  // UNSAFE_componentWillMount() {
+  //   console.log('componentWillMount from Booklist!');
+  // }
 
-  // ------------------------------------------------
-  componentDidMount() {
-    console.log('componentDidMount from Booklist!');
-  }
+  // // ------------------------------------------------
+  // componentDidMount() {
+  //   console.log('componentDidMount from Booklist!');
+  // }
 
-  // ======= Component Update Life Cycle- by props ========
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps from Booklist', nextProps);
-  }
+  // // ======= Component Update Life Cycle- by props ========
+  // UNSAFE_componentWillReceiveProps(nextProps) {
+  //   console.log('componentWillReceiveProps from Booklist', nextProps);
+  // }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log('shouldComponentUpdate from Booklist', nextProps, nextState);
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log('shouldComponentUpdate from Booklist', nextProps, nextState);
 
-    return true; // by default true deya thake
-  }
+  //   return true; // by default true deya thake
+  // }
 
-  UNSAFE_componentWillUpdate(nextProps, nextState) {
-    console.log('componentWillUpdate from booklist');
-  }
+  // UNSAFE_componentWillUpdate(nextProps, nextState) {
+  //   console.log('componentWillUpdate from booklist');
+  // }
 
-  componentDidUpdate() {
-    console.log('componentDidUpdate form Booklist');
-  }
+  // componentDidUpdate() {
+  //   console.log('componentDidUpdate form Booklist');
+  // }
 
   // ------------------------------------------------
   render() {
-    console.log('render from Booklist!');
+    // console.log('render from Booklist!');
 
     return this.props.bookDetailsProps.map((item, index) => {
       return (
