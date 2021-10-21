@@ -1,30 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 
 class NewBook extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      bookName: '',
-      authorName: '',
-      description: '',
-    };
+    this.bName = createRef();
+    this.aName = createRef();
+    this.des = createRef();
 
-    this.inputHandellerChange = this.inputHandellerChange.bind(this);
     this.submitHandeller = this.submitHandeller.bind(this);
   }
 
-  inputHandellerChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-
-    this.setState({
-      [name]: value,
-    });
-  };
-
   submitHandeller = (e) => {
-    console.log(this.state);
+    console.log(this.bName.current.value);
+    console.log(this.aName.current.value);
+    console.log(this.des.current.value);
 
     e.preventDefault();
   };
@@ -47,9 +37,8 @@ class NewBook extends Component {
                 id='book'
                 type='text'
                 name='bookName'
-                value={this.state.bookName}
                 className='u-full-width'
-                onChange={this.inputHandellerChange}
+                ref={this.bName}
               ></input>
             </div>
             <div className='six columns'>
@@ -60,9 +49,8 @@ class NewBook extends Component {
                 id='author'
                 type='text'
                 name='authorName'
-                value={this.state.authorName}
                 className='u-full-width'
-                onChange={this.inputHandellerChange}
+                ref={this.aName}
               ></input>
             </div>
             <br />
@@ -74,10 +62,9 @@ class NewBook extends Component {
             </label>
             <textarea
               name='description'
-              value={this.state.description}
               id='des'
               className='u-full-width'
-              onChange={this.inputHandellerChange}
+              ref={this.des}
             ></textarea>
             <br />
             <input type='submit' className='button-primary' value='Submit' />
