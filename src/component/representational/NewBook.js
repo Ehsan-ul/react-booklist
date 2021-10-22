@@ -28,7 +28,7 @@ class NewBook extends Component {
         <br />
 
         <form onSubmit={this.submitHandeller}>
-          <div className='row'>
+          <div className='row' style={{textAlign: 'left'}}>
             <div className='six columns'>
               <label for='book'>
                 <h5>Book Name:</h5>
@@ -67,7 +67,7 @@ class NewBook extends Component {
               ref={this.des}
             ></textarea>
             <br />
-            <input type='submit' className='button-primary' value='Submit' />
+            <input type='submit' className='button-primary u-full-width' value='Submit' />
           </div>
         </form>
       </div>
